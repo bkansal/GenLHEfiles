@@ -12,4 +12,4 @@ generate p p > chi1 n2 @1
 add process p p > chi1 n2 j @2
 add process p p > chi1 n2 j j @3
 
-output SMS-TChiSlepSnu_mChi-%MNLSP% -nojpeg
+output SMS-C1N2_mC1-%MC1%_mN2-%MN2% -nojpeg
