@@ -17,14 +17,12 @@ process = "SbotSbot"
 # -------------------------------                                                                 \
 #    Constructing grid                                                                             
 
-xmin, xmax, xstep = 1650, 2600, 50
+xmin, xmax, xstep = 1650, 2301, 50
 nevts = 10 #Number of events in thousands                                                           
 
 mpoints = []
-cols = []
 for mx in range(xmin, xmax+1, xstep):
   mpoints.append([mx, 1, nevts])
-  cols.append([mx, 1, nevts])
 ## Test print out for repeated points                                                              
 
 mset = set()
