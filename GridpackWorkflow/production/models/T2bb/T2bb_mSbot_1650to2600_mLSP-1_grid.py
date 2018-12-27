@@ -17,7 +17,7 @@ process = "SbotSbot"
 # -------------------------------                                                                 \
 #    Constructing grid                                                                             
 
-xmin, xmax, xstep = 1650, 2301, 50
+xmin, xmax, xstep = 1650, 2601, 50
 nevts = 10 #Number of events in thousands                                                           
 
 mpoints = []
