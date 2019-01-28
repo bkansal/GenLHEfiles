@@ -29,7 +29,7 @@ goalLumi, minLumi, maxEvents = 800, 20, 150
 
 scanBlocks = []
 scanBlocks.append(gridBlock(800,  1200, 100, 5, 1000, 100, 10))
-scanBlocks.append(gridBlock(1200, 2301, 50, 5, 1000, 50, 40))
+scanBlocks.append(gridBlock(1200, 2701, 50, 5, 1000, 50, 40))
 minDM = 225
 ymin, ymed, ymax = 0, 25, 25
 
