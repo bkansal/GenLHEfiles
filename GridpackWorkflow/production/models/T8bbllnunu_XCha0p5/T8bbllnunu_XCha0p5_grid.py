@@ -14,9 +14,14 @@ import pprint
 model = "T8bbllnunu_XCha0p5"
 process = "StopStop"
 
+period = "Summer16"
+
 # Number of events: min(goalLumi*xsec, maxEvents) (always in thousands)
 goalLumi = 400
-minLumi = 20 
+
+if "16" in period : minLumi = 20
+elif "17" in period : minLumi = 22.5 
+ 
 minEvents, maxEvents = 50, 100
 bandStep = 50
 minDM, midDM, maxDM = 100, 200, 200
@@ -31,9 +36,10 @@ class gridBlock:
     self.dstep = dstep
     
 scanBlocks = []
+
 scanBlocks.append(gridBlock(200, 400, 50, 50,50))
-scanBlocks.append(gridBlock(400,  1501, 50, 50, 25))
-ymin, ymed, ymax = 0, 150, 650
+scanBlocks.append(gridBlock(400, 1801, 50, 50, 25))
+ymin, ymed, ymax = 0, 150, 950
 hlines_below_grid = [25]
 hline_xmin = 400
 
