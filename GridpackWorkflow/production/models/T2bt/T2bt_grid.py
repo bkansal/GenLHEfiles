@@ -30,7 +30,7 @@ class gridBlock:
     self.ystep = ystep
     
 scanBlocks = []
-scanBlocks.append(gridBlock(200,  1201, 50, 50))
+scanBlocks.append(gridBlock(200,  1501, 50, 50))
 ymin, ymed, ymax = 0, 75, 650
 hlines_below_grid = [25]
 hline_xmin = 0

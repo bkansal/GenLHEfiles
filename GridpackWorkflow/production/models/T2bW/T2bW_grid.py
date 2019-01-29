@@ -32,7 +32,7 @@ class gridBlock:
     
 scanBlocks = []
 scanBlocks.append(gridBlock(200, 400, 50, 50,50))
-scanBlocks.append(gridBlock(400,  1201, 50, 50, 25))
+scanBlocks.append(gridBlock(400,  1501, 50, 50, 25))
 ymin, ymed, ymax = 0, 150, 650
 hlines_below_grid = [25]
 hline_xmin = 400
