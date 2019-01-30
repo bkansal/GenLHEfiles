@@ -24,14 +24,25 @@ class gridBlock:
 model = "T1ttbb"
 process = "GlGl"
 
+period = "Summer16"
+batch = 2
+
 # Number of events: min(goalLumi*xsec, maxEvents) (always in thousands)
-goalLumi, minLumi, maxEvents = 800, 20, 150
+goalLumi, maxEvents = 800, 150
+if "16" in period : minLumi = 20
+elif "17" in period : minLumi = 22.5
 
 scanBlocks = []
-scanBlocks.append(gridBlock(800,  1200, 100, 5, 1000, 100, 10))
-scanBlocks.append(gridBlock(1200, 2701, 50, 5, 1000, 50, 40))
+if batch == 1 :
+  scanBlocks.append(gridBlock(800,  1200, 100, 5, 1000, 100, 10))
+  scanBlocks.append(gridBlock(1200, 2301, 50, 5, 1000, 50, 40))
+  ymin, ymed, ymax = 0, 25, 25
+elif batch == 2 :
+  scanBlocks.append(gridBlock(800,  1200, 100, 5, 1000, 100, 10))
+  scanBlocks.append(gridBlock(1200, 2701, 50, 5, 1000, 50, 40))
+  ymin, ymed, ymax = 0, 25, 25
+
 minDM = 225
-ymin, ymed, ymax = 0, 25, 25
 
 
 # Number of events for mass point, in thousands

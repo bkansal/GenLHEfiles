@@ -14,9 +14,13 @@ import pprint
 model = "T2bW"
 process = "StopStop"
 
+period = "Fall17"
+batch = 2
+
 # Number of events: min(goalLumi*xsec, maxEvents) (always in thousands)
 goalLumi = 400
-minLumi = 20 
+if "16" in period : minLumi = 20
+elif "17" in period : minLumi = 22.5
 minEvents, maxEvents = 20, 500
 bandStep = 50
 minDM, midDM, maxDM = 175, 300, 300
@@ -31,9 +35,15 @@ class gridBlock:
     self.dstep = dstep
     
 scanBlocks = []
-scanBlocks.append(gridBlock(200, 400, 50, 50,50))
-scanBlocks.append(gridBlock(400,  1501, 50, 50, 25))
-ymin, ymed, ymax = 0, 150, 650
+if batch == 1 :
+  scanBlocks.append(gridBlock(200, 400, 50, 50,50))
+  scanBlocks.append(gridBlock(400, 1201, 50, 50, 25))
+  ymin, ymed, ymax = 0, 150, 650
+elif batch == 2 :
+  scanBlocks.append(gridBlock(200, 400, 50, 50,50))
+  scanBlocks.append(gridBlock(400, 1501, 50, 50, 25))
+  ymin, ymed, ymax = 0, 150, 650
+ 
 hlines_below_grid = [25]
 hline_xmin = 400
 
